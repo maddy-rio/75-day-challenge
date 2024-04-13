@@ -1,41 +1,59 @@
-import Footer from './Footer'
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
+import Footer from './Footer';
 
 function FillSquare(square: HTMLDivElement) {
-    const currentColor = square.style.backgroundColor;
-    if (currentColor === "" || currentColor === "white") {
-        square.style.backgroundColor = "#47739f96"; // Toggle on
-    } else {
-        square.style.backgroundColor = "white"; // Toggle off
-    }
+  const currentColor = square.style.backgroundColor;
+  if (currentColor === "" || currentColor === "white") {
+    square.style.backgroundColor = "#47739f96"; // Toggle on
+  } else {
+    square.style.backgroundColor = "white"; // Toggle off
+  }
 }
 
 function Home() {
+  const [showModal, setShowModal] = useState(false);
 
-    const gridItems = [...Array(75).keys()];
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
-    return (
-        <>
-        <div>
-           
-<h1>Your 75 Day Challenge</h1>
-</div>
+  const gridItems = [...Array(75).keys()];
+
+  return (
+    <>
+      <div>
+        <img id="home-logo" src='home.png' alt="Home Logo" />
+        <p onClick={toggleModal} className="rules">Challenge Rules</p>
+      </div>
       <Container>
-      <div className="grid-container">
-                    {gridItems.map(index => (
-                        <div onClick={(event) => {
-                            const square = event.currentTarget as HTMLDivElement;
-                            FillSquare(square);
-                        }} key={index} className="grid-item">
-                            {index + 1}
-                        </div>
-                    ))}
-                </div>
-    </Container>
-
-    <Footer/>
+        <div className="grid-container">
+          {gridItems.map(index => (
+            <div onClick={(event) => {
+              const square = event.currentTarget as HTMLDivElement;
+              FillSquare(square);
+            }} key={index} className="grid-item">
+              {index + 1}
+            </div>
+          ))}
+        </div>
+      </Container>
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            
+            <img id="modal-img" src="modal.png"></img>
+            <button  onClick={toggleModal}>x</button>
+            <p>✦ Eat well 90% of the time and only consume alcohol during special occasions</p>
+<p>✦ Work out for 45 minutes per day (with one day of active recovery each week - beginners can start with a shorter workout and build up to 45 minutes a day or split the workout)</p>
+<p>✦ Drink two to three liters of water each day</p>
+<p>✦ Read 10 pages of your book of choice each day</p>
+          </div>
+        </div>
+      )}
+      <Footer />
     </>
-    )
+  );
 }
 
 export default Home;
