@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Footer from './Footer';
+import LogoutButton from './Logout';
+
 
 function FillSquare(square: HTMLDivElement) {
   const currentColor = square.style.backgroundColor;
@@ -24,6 +26,9 @@ function Home() {
     <>
       <div>
         <img id="home-logo" src='home.png' alt="Home Logo" />
+    
+      
+    
         <p onClick={toggleModal} className="rules">Challenge Rules</p>
       </div>
       <Container>
@@ -51,7 +56,7 @@ function Home() {
           </div>
         </div>
       )}
-      <Footer />
+  
     </>
   );
 }
