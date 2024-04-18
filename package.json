@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-fullstack-query",
-  "type": "module",
+  "type": "commonjs",
   "version": "2.0.0",
   "main": "server/index.js",
   "license": "MIT",

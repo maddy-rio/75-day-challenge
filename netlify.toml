@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  environment = { 
+    AUTH0_CLIENT_ID = "h17OK32m9T9BtXdQsHjOUO7TdfnfgecB",
+    AUTH0_CLIENT_SECRET = "-UZlbqVSTVLeXOHfkAjcudc3bnqw8u9M9q3QZdtWCD4fdP4eup0Ft_55TEWOajRo",
+    AUTH0_DOMAIN = "dev-maddy.au.auth0.com"
+  }

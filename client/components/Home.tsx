@@ -6,10 +6,14 @@ import LogoutButton from './Logout';
 
 function FillSquare(square: HTMLDivElement) {
   const currentColor = square.style.backgroundColor;
+  const originalText =square.dataset.originalText || square.innerText;
   if (currentColor === "" || currentColor === "white") {
     square.style.backgroundColor = "#47739f96"; // Toggle on
+    square.innerText = "✔️";
+    square.dataset.originalText = originalText;
   } else {
     square.style.backgroundColor = "white"; // Toggle off
+    square.innerText = originalText;
   }
 }
 
