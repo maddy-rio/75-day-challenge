@@ -30,7 +30,7 @@ return (
         <div className='header'>
       <img className="user-img" src={user?.picture} alt="User" />
       <div className="dropdown">
-            <p className="user">{user?.name}</p>
+            <p className="user">{user?.username}</p>
   <div className="dropdown-content">
    
     <a><LogoutButton /></a>
