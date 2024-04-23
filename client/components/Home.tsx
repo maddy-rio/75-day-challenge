@@ -6,35 +6,17 @@ import LogoutButton from './Logout';
 
 function FillSquare(square: HTMLDivElement) {
   const currentColor = square.style.backgroundColor;
-  const originalText = square.dataset.originalText || square.innerText;
-
+  const originalText =square.dataset.originalText || square.innerText;
   if (currentColor === "" || currentColor === "white") {
     square.style.backgroundColor = "#47739f96"; // Toggle on
     square.innerText = "✔️";
     square.dataset.originalText = originalText;
-
-    // Store the selected square in local storage
-    localStorage.setItem(square.id, "selected");
+    
   } else {
     square.style.backgroundColor = "white"; // Toggle off
     square.innerText = originalText;
-
-    // Remove the selected square from local storage
-    localStorage.removeItem(square.id);
   }
 }
-
-// Retrieve selected squares when the user logs back in
-const selectedSquares = Object.keys(localStorage).filter(key => localStorage.getItem(key) === "selected");
-selectedSquares.forEach(squareId => {
-  const square = document.getElementById(squareId);
-  if (square) {
-    square.style.backgroundColor = "#47739f96"; // Toggle on
-    square.innerText = "✔️";
-    square.dataset.originalText = square.innerText;
-  }
-});
-
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
