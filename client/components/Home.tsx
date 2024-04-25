@@ -29,6 +29,7 @@ function Home() {
 
   return (
     <>
+    <div className='home-container'>
       <div>
         <img id="home-logo" src='home.png' alt="Home Logo" />
     
@@ -36,7 +37,7 @@ function Home() {
     
         <p onClick={toggleModal} className="rules">Challenge Rules</p>
       </div>
-      <Container>
+    
         <div className="grid-container">
           {gridItems.map(index => (
             <div onClick={(event) => {
@@ -47,7 +48,8 @@ function Home() {
             </div>
           ))}
         </div>
-      </Container>
+        </div>
+  
       {showModal && (
         <div className="modal-overlay">
           <div className="modal">

@@ -6,8 +6,8 @@ const LogoutButton = () => {
 
   return (
     
-    <p  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-      Log Out
+    <p className="logout-button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      ➤ Logout  
     </p>
   );
 };

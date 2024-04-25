@@ -28,19 +28,8 @@ return (
   <>
 
       <IfAuthenticated>
-        <div className='header'>
-      <img className="user-img" src={user?.picture} alt="User" />
-      <div className="dropdown">
-            <p className="user">{user?.nickname}</p>
-            
-  <div className="dropdown-content">
-   
-    <a><LogoutButton /></a>
-
-  </div>
-</div>
-      
-        </div>
+     
+    <a ><LogoutButton /></a>
         <Home />
         <Footer />
       </IfAuthenticated>
