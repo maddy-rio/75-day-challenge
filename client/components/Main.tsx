@@ -4,6 +4,7 @@ import { IfAuthenticated, IfNotAuthenticated } from './Authentication'
 import LoginButton from './Login';
 import LogoutButton from './Logout';
 import Home from './Home';
+import Footer from './Footer';
 
 
 function Main() {
@@ -41,13 +42,21 @@ return (
       
         </div>
         <Home />
+        <Footer />
       </IfAuthenticated>
       <IfNotAuthenticated>
+  
       <section id="section-header">
+      <div className="container">
+        <div className='container-content'>
  <img id="logo" src="logo.png"></img>
  <br></br>
+ <LoginButton />
+ </div>
+ </div>
  </section>
-        <LoginButton />
+
+
       </IfNotAuthenticated>
 
     

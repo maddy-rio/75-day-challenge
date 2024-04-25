@@ -2,7 +2,7 @@ import React from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 import Main from './Main';
-import Footer from './Footer';
+
 
 const domain = 'dev-maddy.au.auth0.com';
 const clientId = 'h17OK32m9T9BtXdQsHjOUO7TdfnfgecB';
@@ -19,7 +19,7 @@ function App() {
   >
     <div className="app">
       <Main />
-      <Footer />
+  
     </div>
   </Auth0Provider>
 );
