@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import App from './components/App'
-import Home from './components/Home'
+import App from './src/components/App'
+import Home from './src/components/Home'
 
 
 export const routes = (

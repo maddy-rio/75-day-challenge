@@ -12,13 +12,6 @@ margin: 0;
   background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
 }
 
-.footer {
-  font-size: 17px;
-  padding: 25px 0;
-  margin: 0;
-background-color: #47739f44;
-  
-}
 
 img {
   padding: 95px 0 25px 0;
@@ -69,7 +62,7 @@ a:hover {
 }
 
 .container {
-   margin: 140px auto 0 auto;
+   margin: 120px auto 0 auto;
   max-width: 700px;
   height: 400px;
   background-color: white;
@@ -86,9 +79,15 @@ a:hover {
 
 // Logged in page || Home page
 
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
 .logout-button {
   width: 140px;
-  margin: 15px 0 0 1200px;
+  margin-top: 15px;
   font-size: 16px;
   font-weight: 500;
   color: #47739f91;
@@ -131,8 +130,7 @@ a:hover {
   cursor: pointer;
   font-size: 28px;
   text-align: end;
-  margin: 0 140px 30px 700px;
-padding: 0;
+padding-right: 130px;
   text-decoration: line-through;
   text-decoration-thickness:12px;
   text-decoration-color: #47739f42;
@@ -143,12 +141,20 @@ padding: 0;
 }
 
 .home-container {
-  margin: 20px 100px 80px 100px;
+  margin: 5px 100px 80px 100px;
   max-width: fit-content;
   padding: 10px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+  font-size: 17px;
+  padding: 25px 0;
+  margin: 0;
+background-color: #47739f44;
+  
 }
 
 
@@ -246,108 +252,169 @@ h1 {
 
       @media only screen and (max-width: 1200px) {
 
-        .footer, .user, a {
+        // Landing page
+.container {
+  max-width: 700px;
+  height: 400px;
+}
+
+img {
+  padding: 95px 0 25px 0;
+}
+
+
+       // Home page
+       .rules {
+         font-size: 26px;
+         padding-right: 100px;
+       }
+        .footer, .logout-button {
           font-size: 15px;
         }
 
-      .rules {
-        font-size: 26px;
-      }
+        .grid-container {
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          margin: 10px 90px 70px 90px;
+        }
+        .grid-item {
+          padding: 40px;
+        }
 
-
-
-        
       }
     
     @media only screen and (max-width: 992px) {
-        .footer,  .user, a{
+      // Landing page
+      .container {
+        max-width: 600px;
+        height: 350px;
+      }
+
+      img {
+        padding: 75px 0 20px 0;
+      }
+
+       // Home page
+       .rules {
+        font-size: 22px;
+        padding-right: 90px;
+      }
+
+       .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        margin: 10px 80px 60px 80px;
+      }
+
+       .grid-item {
+        padding: 35px;
+      }
+
+        .footer, .login-button { 
           font-size: 15px;
         }
 
-        .user-img {
-          width: 24px;
-          height: 24px; 
-        }
-
-        .rules {
-          font-size: 26px;
-        }
-
-      
-
-        .button {
-          font-size: 16px;
-          padding: 13px 30px;
-      }
     }
     
     @media only screen and (max-width: 768px) {
-        .footer, .user, a{
+      // Landing page
+      .container {
+        max-width: 550px;
+        height: 300px;
+      }
+
+      img {
+        padding: 60px 0 20px 0;
+      }
+
+
+
+       // Home page
+
+       .rules {
+        font-size: 18px;
+        padding-right: 80px;
+      }
+
+       .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        margin: 10px 70px 50px 70px;
+      }
+
+       .grid-item {
+        padding: 30px;
+      }
+
+        .footer, .logout-button{
           font-size: 13px;
         }
 
-        .user-img {
-          width: 22px;
-          height: 22px; 
-        }
-
-        .rules {
-          font-size: 24px;
-        }
-       
-
-        .button {
-          font-size: 14px;
-          padding: 11px 28px;
-      }
     }
     
     @media only screen and (max-width: 576px) {
-       .footer, .user, a {
+      // Landing page
+      .container {
+        max-width: 500px;
+        height: 250px;
+      }
+
+      img {
+        padding: 50px 0 19px 0;
+      }
+
+
+       // Home page
+
+       .rules {
+        font-size: 16px;
+        padding-right: 70px;
+      }
+       .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        margin: 10px 60px 40px 60px;
+      }
+
+       .grid-item {
+        padding: 25px;
+      }
+
+       .footer, .logout-button {
          font-size: 11px;
        }
 
-       .user-img {
-        width: 16px;
-        height: 16px; 
-      }
-     
-      .rules {
-        font-size: 22px;
-      }
-
-      .button {
-        font-size: 12px;
-        padding: 9px 26px;
-    }
+      
     }
     
     @media only screen and (max-width: 480px) {
-      .footer, .user, a{
+      // Landing page
+      .container {
+        max-width: 450px;
+        height: 200px;
+      }
+
+      img {
+        padding: 55px 0 17px 0;
+      }
+
+
+       // Home page
+       .rules {
+        font-size: 14px;
+        padding-right: 60px;
+      }
+
+       .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        margin: 10px 50px 30px 50px;
+      }
+
+       .grid-item {
+        padding: 20px;
+      }
+
+      .footer, .logout-button{
         font-size: 9px;
       }
 
-      .user-img {
-        width: 12px;
-        height: 12px; 
-      }
+      
 
-      .rules {
-        font-size: 20px;
-      }
-
-      .dropdown-content {
-        min-width: 90px;
-        right: 40px;
-      }
-
-      .dropdown-content a {
-        padding: 0;
-      }
-     
-      .button {
-        font-size: 10px;
-        padding: 7px 22px;
-    }
     }
   
