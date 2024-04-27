@@ -8,7 +8,7 @@ const LoginButton = () => {
   return (
     <>
       <button className="login-button" onClick={() => loginWithRedirect()}>Login</button>
-      <button className="sign-up-button"><Link to="https://dev-maddy.au.auth0.com/u/signup?state=hKFo2SBxcnZKc3NEQkNrX05LT1dPZW1iUFF5Y3VvbTFfMUJmSaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDUwUHJPNWg3X1c5dElXaVpPaXB4LWZiMXR5eS1aQ1F4o2NpZNkgaDE3T0szMm05VDlCdFhkUXNIak9VTzdUZGZuZmdlY0I">Sign up</Link></button>
+      <button className="sign-up-button"><Link to="https://dev-maddy.au.auth0.com/u/signup?state=hKFo2SAzUFR2bnEzMEZWRUp4RnFfelM3aElUSUZ2aUNDTndYeqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIERUOGYxU25HR3ZJWFc3LTduOU55QmFkZmxKRVBJclJwo2NpZNkgaDE3T0szMm05VDlCdFhkUXNIak9VTzdUZGZuZmdlY0I">Sign up</Link></button>
     </>
   );
 }
