@@ -31,7 +31,7 @@ function Home() {
     <>
     <div className='home-container'>
       <div>
-        <img id="home-logo" src='home.png' alt="Home Logo" />
+        <img id="home-logo" src='home.jpeg' alt="Home Logo" />
     
       
     
@@ -54,12 +54,12 @@ function Home() {
         <div className="modal-overlay">
           <div className="modal">
             
-            <img id="modal-img" src="modal.png"></img>
+            <img id="modal-img" src="modal.jpeg"></img>
             <button  onClick={toggleModal}>x</button>
             <p>✦ Eat well 90% of the time and only consume alcohol during special occasions</p>
-<p>✦ Work out for 45 minutes per day (with one day of active recovery each week - beginners can start with a shorter workout and build up to 45 minutes a day or split the workout)</p>
-<p>✦ Drink two to three liters of water each day</p>
-<p>✦ Read 10 pages of your book of choice each day</p>
+            <p>✦ Work out for 45 minutes per day (with one day of active recovery each week - beginners can start with a shorter workout and build up to 45 minutes a day or split the workout)</p>
+            <p>✦ Drink two to three liters of water each day</p>
+            <p>✦ Read 10 pages of your book of choice each day</p>
           </div>
         </div>
       )}

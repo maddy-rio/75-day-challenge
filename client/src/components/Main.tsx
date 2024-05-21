@@ -38,7 +38,7 @@ return (
       <section id="section-header">
       <div className="container">
         <div className='container-content'>
- <img id="logo" src="logo.png"></img>
+ <img id="logo" src="logo.jpeg"></img>
  <br></br>
  <LoginButton />
  </div>
