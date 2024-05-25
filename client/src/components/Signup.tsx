@@ -2,12 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const SignupButton = () => {
-  const signupUrl = "https://dev-maddy.au.auth0.com/authorize?" +
-    "response_type=code&" +
-    "client_id=h17OK32m9T9BtXdQsHjOUO7TdfnfgecB" +
-    "redirect_uri=https://75daychallenge.netlify.app&" +
-    "state=STATE&" +
-    "screen_hint=signup";
+  const signupUrl = "https://dev-maddy.au.auth0.com/u/signup?" +
+    "state=hKFo2SBvNXZ5NWtKMGRZcHRqbHdMNWJkMlFGUE1BZklrOGlCYqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIENpYWNUOUhkczJVdnM0T3NyaEd1RUw3anFlNDhhZFpKo2NpZNkgaDE3T0szMm05VDlCdFhkUXNIak9VTzdUZGZuZmdlY0I";
 
   return (
     <button className="sign-up-button">
